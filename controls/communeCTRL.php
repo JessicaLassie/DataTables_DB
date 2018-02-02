@@ -10,9 +10,10 @@ try {
     $lsContenu = "";
     $tLines = communeDAO::selectAll($lcn);
     
-    $lsContenu = json_encode($tLines);
+    $data["data"] = $tLines;
+    $data = json_encode($data);
     
-    echo $lsContenu;
+    echo $data;
 
     $lcn = null;
     
